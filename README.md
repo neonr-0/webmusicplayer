@@ -54,6 +54,11 @@ Where is `playlist_demo` (example) is table name of your playlist.
 DROP TABLE IF EXISTS `playlist_demo`;
 CREATE TABLE IF NOT EXISTS `playlist_demo` (
 ```
+and import it to your database
+```
+mysql -u username -p database_name < db/playlist.sql
+```
+
 3. Add corresponding rows for tracks in your playlist table. Most important columns you need is:
 
 | path | album | album_artist | artist | cuesheet | directoryname | length | title | path |
