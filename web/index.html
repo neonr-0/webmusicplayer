@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=1024" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nPlayer</title>
+    <link href="/css/main.css" rel="stylesheet" media="all">
+    <link href="style.css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="./mplayer.js" defer></script>
+</head>
+<body>
+    <div class="player">
+        <div class="control_wrapper">
+            <div class="controls">
+                <div class="cur_play">
+                    Now playing
+                </div>
+                <div class="control_bnt">
+                    <button class="btn btn_stop">
+                        <p class="icon-stop"></p>
+                    </button>
+                    <button class="btn btn_play">
+                        <p class="icon-play"></p>
+                    </button>
+                    <button class="btn btn_pause">
+                        <p class="icon-pause"></p>
+                    </button>
+                    <button class="btn btn_prev">
+                        <p class="icon-prev"></p>
+                    </button>
+                    <button class="btn btn_next">
+                        <p class="icon-next"></p>
+                    </button>
+                    <button class="btn btn_random">
+                        <p class="icon-random"></p>
+                    </button>
+                </div>
+                <div class="volume_wrapper">
+                    <div class="volume_caption">70</div>
+                    <input id="volume" class="volume" type="range" value="0.7" step="0.01" min="0" max="1" />
+                </div>
+                <div class="progress_container">
+                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100" />
+                    <div class="underProgress">
+                        <div class="track_time">00:00/00:00</div>
+                        <div class="play_order_wrapper">
+                            <label>Order</label>
+                            <select name="PlayOrder" class="play_order">
+                                <option value="default">default</option>
+                                <option value="repeatTrack" disabled="disabled">Repeat (track)</option>
+                                <option value="repeatPlaylist" >Repeat (playlist)</option>
+                                <option value="random">Random</option>
+                                <option value="shuffleTrack" disabled="disabled">Shuffle (tracks)</option>
+                                <option value="shuffleAlbums" disabled="disabled">Shuffle (albums)</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <audio id="audio" src=""></audio>
+            </div>
+        </div>
+        <div class="main_view">
+            <div class="left_panel">
+                <div class="playlist_selector_header">Playlists:</div>
+                <ul class="playlist_selector">
+                </ul>
+                <div class="thumb_panel">
+                    <div class="thumbnail">
+                    </div>
+                </div>
+            </div>
+                <table class="playlist">
+                    <thead>
+                        <tr>
+                            <td>Duration</td>
+                            <td>Artist/album</td>
+                            <td>Track</td>
+                            <td>Title/Track artist</td>
+                            <td>Bitrate</td>
+                            <td>Codec</td>
+                            <td>Date</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+           <div class="sWait"></div>
+        </div>
+        <div class="status_bar">
+            <br />
+        </div>
+    </div>
+    <div class="rmenu"><ul><li><button class="rmenu_sharebtn">Share</button></li></ul></div>
+    <div class="tooltip"></div>
+</body>
+
+</html>
