@@ -70,5 +70,3 @@ if you want to use transcoding you need to have columns `referenced_file`, `refe
 ### Import playlists
 You can use SQLite utilites for foobar2000 to export your playlist, correct file paths and export it to MariaDB.
 You can use this as example playlist `db/playlist_example.sql`
-### Working example
-[Music Player example](https://neonsoftsol.com/musicplayer/)
